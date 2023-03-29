@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>پنل مدیریت | داشبورد کاربرگ</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- bootstrap rtl -->
+  <link rel="stylesheet" href="dist/css/bootstrap-rtl.min.css">
+  <!-- bootstrapTable -->
+  <link rel="stylesheet" href="dist/css/tableView.css/bootstrap-table.min.css">
+  <!-- template rtl version -->
+  <link rel="stylesheet" href="dist/css/custom-style.css">
+  <link rel="stylesheet" href="./sortTable/jquery.sortableTable.css" />
+
+
+  <style>
+    table {
+      text-align: center;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+
+    th {
+      background-color: #3a444e;
+      color: white;
+
+    }
+
+    .table-responsive {
+      /*      display: block;
+      width: 100%;
+      overflow-x: auto; */
+      display: block;
+      overflow-x: auto !important;
+      white-space: nowrap !important;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar
+    }
+
+    /*     .tozihScroll,
+    .onvanScrooll {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+      max-width: 150px;
+    } */
+  </style>
+
+</head>
+
+<body class="hold-transition sidebar-mini">
+
+
+
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link"> <span>سامانه تدوین
+              فرآیندهای
+              سازمانی
+              جامعه الزهرا
+              <sup>(س)</sup></span> </a>
+        </li>
+        <!--       <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">
+        </a>
+      </li> -->
+      </ul>
+
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <img src="dist/img/jame.png" alt="جامعه الزهرا" width="80" height="44" class="">
+        </li>
+
+
+        <form class="form-inline ml-3 mb-0">
+          <div class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" type="search" placeholder="جستجو" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
+              class="fa fa-th-large fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="dist/img/logTop.png" alt="BRP" class="brand-image img-circle elevation-3 imgJame" style="opacity: .8">
+        <span class="brand-text font-weight-light">پنل مدیریت</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar" style="direction: ltr">
+        <div style="direction: rtl">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="dist/img/user.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="#" class="d-block">نام و نام خانوادگی</a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-dashboard"></i>
+                  <p>
+                    تعیین حوزه فرآیندی
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <!--            <li class="nav-item">
+                    <a href="index.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>تعیین سطح</p>
+                    </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a href="#" onclick="listShowPage('index.html')" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>ایجاد کاربرگ</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+<!--               <li class="nav-item">
+                <a href="Edit.html" class="nav-link">
+                  <i class="nav-icon fa fa-th"></i>
+                  <p>
+                    ویرایش کاربرگ
+                  </p>
+                </a>
+              </li> -->
+              <li class="nav-item has-treeview">
+                <a href="#" onclick="listShowPage('ListShow.html')" class="nav-link active">
+                  <i class="nav-icon fa fa-pie-chart"></i>
+                  <p>
+                    نمایش کاربرگ
+                    <!--                     <i class="right fa fa-angle-left"></i> -->
+                  </p>
+                </a>
+
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-table"></i>
+                  <p>
+                    گزارشات
+                    <!--    <i class="fa fa-angle-left right"></i> -->
+                  </p>
+                </a>
+
+
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-table"></i>
+                  <p>
+                    راهنما
+                    <!--    <i class="fa fa-angle-left right"></i> -->
+                  </p>
+                </a>
+
+              </li>
+
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">نمایش زیرفعالیت</h1>
+            </div>
+    <!--         <div class="col-sm-4 input-group">
+              <input id="searchSubAct" type="text" class="form-control" placeholder="" aria-label="Recipient's username" aria-describedby="basic-addon2">
+              <div class="input-group-append">
+                <button onclick="searchSub()" class="btn btn-outline-secondary" type="button">جستجو </button>
+              </div>
+            </div> -->
+            <div class="col-sm-6" style="text-align: left;">
+              <a href="#" onclick="backlistShow('ListShow.html')" class="btn btn-outline-primary"> بازگشت به صفحه قبل </a>
+            </div>
+            <!--             <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-left">
+                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                <li class="breadcrumb-item active">داشبورد ورژن 2</li>
+              </ol>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- /.content-header -->
+      <section class="content">
+        <div class="listSub"></div>
+        <div class="container-fluid">
+          <div class="col-md-12">
+            <hr>
+            <div class="table-responsive">
+              <table class="ui-sortable-table table table-bordered table-striped" id="dataTable" width="100%"
+                cellspacing="0">
+                <thead>
+                  <tr>
+                    <th>کد زیر فعالیت </th>
+                    <th>عنوان زیر فعالیت</th>
+                    <th>توضیحات فعالیت</th>
+                    <th>عنوان ورودی</th>
+                    <th>مبدا ورودی</th>
+                    <th>عنوان مجری</th>
+                    <th>عنوان خروجی</th>
+                    <th>مقصد خروجی</th>
+                    <th>نوع روش</th>
+                    <th>نام سامانه</th>
+                  </tr>
+                </thead>
+                <tbody id="divBodySub"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <br> <br>
+        <br>
+        <br>
+    </div>
+    </section>
+    <!-- /.content -->
+  </div>
+
+  <aside class="control-sidebar control-sidebar-dark">
+  </aside>
+  </div>
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+  <!-- Bootstrap 4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Sparkline -->
+  <!-- jvectormap -->
+  <!-- jQuery Knob Chart -->
+  <!-- daterangepicker -->
+  <!-- datepicker -->
+  <!-- Bootstrap WYSIHTML5 -->
+  <!-- Slimscroll -->
+  <!-- FastClick -->
+  <!-- AdminLTE App -->
+  <script src="dist/js/adminlte.js"></script>
+  <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+  <!-- AdminLTE for demo purposes-left-colorBox -->
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/jsTableNew.js"></script>
+  <script src="dist/js/custome.js"></script>
+  <script src="./sortTable/ajaxgoogleapis.js"></script>
+  <script type="application/javascript" src="./sortTable/jquery.sortableTable.js"></script>
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-36251023-1']);
+    _gaq.push(['_setDomainName', 'jqueryscript.net']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+
+  <script>
+    try {
+      fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function (response) {
+        return true;
+      }).catch(function (e) {
+        var carbonScript = document.createElement("script");
+        carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+        carbonScript.id = "_carbonads_js";
+        document.getElementById("carbon-block").appendChild(carbonScript);
+      });
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+</body>
+
+</html>

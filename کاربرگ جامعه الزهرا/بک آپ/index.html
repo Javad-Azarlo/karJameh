@@ -1,0 +1,828 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>پنل مدیریت | داشبورد کاربرگ</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- bootstrap rtl -->
+  <link rel="stylesheet" href="dist/css/bootstrap-rtl.min.css">
+  <!-- template rtl version -->
+  <link rel="stylesheet" href="dist/css/custom-style.css">
+</head>
+
+<body class="hold-transition sidebar-mini">
+  <div class="wrapper">
+
+    <!-- Navbar -->
+    <nav class="main-header navbar navbar-expand bg-white navbar-light border-bottom">
+      <!-- Left navbar links -->
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" data-widget="pushmenu" href="#"><i class="fa fa-bars"></i></a>
+        </li>
+        <li class="nav-item d-none d-sm-inline-block">
+          <a href="index3.html" class="nav-link"> <span>سامانه تدوین
+              فرآیندهای
+              سازمانی
+              جامعه الزهرا
+              <sup>(س)</sup></span> </a>
+        </li>
+        <!--       <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">
+        </a>
+      </li> -->
+      </ul>
+
+
+
+      <!-- Right navbar links -->
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown">
+          <img src="dist/img/jame.png" alt="جامعه الزهرا" width="80" height="44" class="">
+        </li>
+        <!-- Messages Dropdown Menu -->
+        <!--  <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-comments-o"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-left">
+          <a href="#" class="dropdown-item">
+
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 ml-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  حسام موسوی
+                  <span class="float-left text-sm text-danger"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">با من تماس بگیر لطفا...</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 ساعت قبل</p>
+              </div>
+            </div>
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle ml-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  پیمان احمدی
+                  <span class="float-left text-sm text-muted"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">من پیامتو دریافت کردم</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i> 4 ساعت قبل</p>
+              </div>
+            </div>
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle ml-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  سارا وکیلی
+                  <span class="float-left text-sm text-warning"><i class="fa fa-star"></i></span>
+                </h3>
+                <p class="text-sm">پروژه اتون عالی بود مرسی واقعا</p>
+                <p class="text-sm text-muted"><i class="fa fa-clock-o mr-1"></i>4 ساعت قبل</p>
+              </div>
+            </div>
+
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">مشاهده همه پیام‌ها</a>
+        </div>
+      </li> -->
+        <!-- Notifications Dropdown Menu -->
+        <!--       <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="fa fa-bell-o"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-left">
+          <span class="dropdown-item dropdown-header">15 نوتیفیکیشن</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-envelope ml-2"></i> 4 پیام جدید
+            <span class="float-left text-muted text-sm">3 دقیقه</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-users ml-2"></i> 8 درخواست دوستی
+            <span class="float-left text-muted text-sm">12 ساعت</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fa fa-file ml-2"></i> 3 گزارش جدید
+            <span class="float-left text-muted text-sm">2 روز</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">مشاهده همه نوتیفیکیشن</a>
+        </div>
+      </li> -->
+        <!-- SEARCH FORM -->
+
+        <form class="form-inline ml-3 mb-0">
+          <div class="input-group input-group-sm">
+            <input class="form-control form-control-navbar" type="search" placeholder="جستجو" aria-label="Search">
+            <div class="input-group-append">
+              <button class="btn btn-navbar" type="submit">
+                <i class="fa fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <li class="nav-item">
+          <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#"><i
+              class="fa fa-th-large fa-2x"></i></a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.navbar -->
+
+    <!-- Main Sidebar Container -->
+    <aside class="main-sidebar sidebar-dark-primary elevation-4">
+      <!-- Brand Logo -->
+      <a href="#" class="brand-link">
+        <img src="dist/img/logTop.png" alt="BRP" class="brand-image img-circle elevation-3 imgJame" style="opacity: .8">
+        <span class="brand-text font-weight-light">پنل مدیریت</span>
+      </a>
+
+      <!-- Sidebar -->
+      <div class="sidebar" style="direction: ltr">
+        <div style="direction: rtl">
+          <!-- Sidebar user panel (optional) -->
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="image">
+              <img src="dist/img/user.png" class="img-circle elevation-2" alt="User Image">
+            </div>
+            <div class="info">
+              <a href="#" id="tokenStorage" class="d-block"></a>
+            </div>
+          </div>
+
+          <!-- Sidebar Menu -->
+          <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+              <!-- Add icons to the links using the .nav-icon class
+                 with font-awesome or any other icon font library -->
+              <li class="nav-item has-treeview menu-open">
+                <a href="#" class="nav-link active">
+                  <i class="nav-icon fa fa-dashboard"></i>
+                  <p>
+                    تعیین حوزه فرآیندی
+                    <i class="right fa fa-angle-left"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <!--              <li class="nav-item">
+                    <a href="./index.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>تعیین سطح</p>
+                    </a>
+                  </li> -->
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>ایجاد کاربرگ</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+             <!-- <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-th"></i>
+                  <p>
+                    ویرایش کاربرگ
+                   </p>
+                </a>
+              </li>  -->
+              <i style="visibility: hidden;" class="EditGuid"></i>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link" onclick="listShowPage('ListShow.html')">
+                  <i class="nav-icon fa fa-pie-chart"></i>
+                  <p>
+                    نمایش کاربرگ
+                    <!--                     <i class="right fa fa-angle-left"></i> -->
+                  </p>
+                </a>
+                <!--               <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/charts/chartjs.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>نمودار ChartJS</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/charts/flot.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>نمودار Flot</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/charts/inline.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>نمودار Inline</p>
+                    </a>
+                  </li>
+                </ul> -->
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-table"></i>
+                  <p>
+                    گزارشات
+                    <!--    <i class="fa fa-angle-left right"></i> -->
+                  </p>
+                </a>
+                </a>
+                <!--            <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/UI/general.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>عمومی</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/UI/icons.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>آیکون‌ها</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/UI/buttons.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>دکمه‌ها</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/UI/sliders.html" class="nav-link">
+                      <i class="fa fa-circle-o nav-icon"></i>
+                      <p>اسلایدر‌ها</p>
+                    </a>
+                  </li>
+                </ul> -->
+              </li>
+              <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-table"></i>
+                  <p>
+                    راهنما
+                    <!--    <i class="fa fa-angle-left right"></i> -->
+                  </p>
+                </a>
+                </a>
+              </li>
+              <li data-toggle="modal" data-target="#exampleModalCenter" class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <i class="nav-icon fa fa-power-off"></i>
+                  <p>
+                    خروج از سامانه
+                    <!--    <i class="fa fa-angle-left right"></i> -->
+                  </p>
+                </a>
+                </a>
+              </li>
+
+              <!-- Modal -->
+              <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+                aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-body">
+                      آیا تمایلی به خروج از سامانه را دارید ؟</div>
+                    <div class="modal-footer">
+                      <a style="color: #fff;" href="#" class="btn btn-secondary" data-dismiss="modal">خیر</a>&nbsp;
+                      <a style="color: #fff;" href="#" onclick="exitProfile()" class="btn btn-primary">بله</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!--               <li class="nav-item has-treeview">
+                <a href="#" class="nav-link">
+                  <p id="token">
+                  
+                  </p>
+                </a>
+                </a>
+              </li> -->
+            </ul>
+          </nav>
+          <!-- /.sidebar-menu -->
+        </div>
+      </div>
+      <!-- /.sidebar -->
+    </aside>
+    <!-- Content Wrapper. Contains page content -->
+    <div class="content-wrapper">
+      <!-- Content Header (Page header) -->
+      <div class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="m-0 text-dark">ایجاد کاربرگ</h1>
+            </div>
+            <!--             <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-left">
+                <li class="breadcrumb-item"><a href="#">خانه</a></li>
+                <li class="breadcrumb-item active">داشبورد ورژن 2</li>
+              </ol>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- /.content-header -->
+
+      <!-- Main content -->
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">سطح فرآیندی</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label> 1 ) کلان فرآیند ها</label>
+                    <span class="spanStar"> * </span>
+                    <select onchange="onchangeKalan()" id="kalanFaraiand" class="form-control select2"
+                      style="width: 100%;">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                    <label> 2 ) گروه فرآیند ها</label>
+                    <span class="spanStar"> * </span>
+                    <select onchange="onchangeGroh()" id="grohFaraiand" class="form-control select2"
+                      style="width: 100%;">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>3 ) فرآیند اصلی کاربرگ</label>
+                    <span class="spanStar"> * </span>
+                    <select onchange="onchangeKarbarg()" id="karbargFaraiand" class="form-control select2"
+                      style="width: 100%;">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                    <label> 4 ) زیر فرآیند ها</label>
+                    <span class="spanStar"> * </span>
+                    <select id="zirFaraiand" class="form-control select2" style="width: 100%;">
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <br>
+              <hr>
+              <br>
+              <!-- اهداف ارزش/عنوان ففصیلی /شناسه ارزیابی -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>عنوان فرایند تفصیلی</label>
+                    <textarea type="text" class="form-control" id="titleTafzili" placeholder=""></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label>شناسه پایش</label>
+                    <textarea type="text" class="form-control" id="paiesh" placeholder=""></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>اهداف/ارزش/خروجی مورد انتظار</label>
+                    <textarea type="text" class="form-control" id="ahdaf" placeholder=""></textarea>
+                  </div>
+                </div>
+              </div>    
+              <br>
+              <hr>
+              <br>
+              <!-- /.row -->
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>1 ) نوع واحد سازمانی (شناسه)</label>
+                    <select onchange="typeOrg()" class="form-control select2" id="departmentsDropdown">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                    <label>2 ) عنوان واحدسازمانی سطح ارشدی </label>
+                    <select onchange="titleOrgArshad()" id="rezTitlesazman" class="form-control select2">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <!-- /.col -->
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>3 ) عنوان واحدسازمانی سطح میانی </label>
+                    <select onchange="titleOrgMidle()" id="resCodeSazman" class="form-control select2"
+                      style="width: 100%;">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                  <div class="form-group">
+                    <label>4 ) عنوان واحدسازمانی سطح پایه </label>
+                    <select id="selectNumber" class="form-control select2" style="width: 100%;">
+                      <option>لطفا انتخاب نمائید ...</option>
+                    </select>
+                  </div>
+                  <!-- /.form-group -->
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+              <div class="col-md-12">
+                <a onclick="sabtFraiand()" id="sabtFraiandId" href="#" class="btn btn-success float-left">
+                  ثبت
+                </a>
+              </div>
+            </div>
+
+            <!-- /.card-body -->
+            <!--             <div class="card-footer">
+              برای کسب اطلاعات بیشتر و استفاده از راهنمای این کتابخانه به <a href="https://select2.github.io/">مستندات</a> مراجعه کنید
+            </div> -->
+          </div>
+          
+
+          <div class="card card-secondary">
+            <div class="card-header">
+              <h3 class="card-title">اطلاعات کاربرگ</h3>
+
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+              </div>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <div class="row">
+
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>عنوان فرآیند </label> <span class="spanStar"> * </span>
+                    <input id="titleFaraiand" type="text" class="form-control" placeholder="">
+                    <span class="titFar"></span>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>شناسه فرآیند </label> <span class="spanStar"> * </span>
+                    <input id="shenasehFaraiand" readonly type="text" class="form-control" placeholder="">
+                  </div>
+                </div>
+                <!-- /.col -->
+              </div>
+              <!-- /.row -->
+            </div>
+          </div>
+          <!-- /.card -->
+          <!-- /.فعالیت ها -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header" id="heroFaaliat">
+                  <h3 class="card-title">
+                    فعالیت ها
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-12">
+                        <label>مراحل فعالیت</label> <span class="spanStar"> * </span>
+                        <input type="text" class="form-control" id="marahelFaaliat" placeholder="">
+                        <span class="marahelFaaliat"></span>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label>توضیح فعالیت</label>
+                        <input type="text" class="form-control" id="sharhFaaliat" placeholder="">
+                        <span class="sharhFaaliat"></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.ورودی ها -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    ورودی ها
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-8">
+                        <label>عنوان </label> <span class="spanStar"> * </span>
+                        <textarea id="titleVorod" type="text" class="form-control"></textarea>
+                        <span class="titVorod"></span>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>مبدا (از) </label> <span class="spanStar"> * </span>
+                        <textarea id="mabdaeVorod" type="text" class="form-control"></textarea>
+                        <span class="mabdaVorod"></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.مشخصات مجری -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    مشخصات مجری
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-8">
+                        <label>عنوان </label> <span class="spanStar"> * </span>
+                        <textarea id="titleMojre" type="text" class="form-control"></textarea>
+                        <span class="titMojre"></span>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>شناسه </label>
+                        <textarea id="shenaseMojre" type="text" class="form-control"></textarea>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.خروجی ها -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    خروجی ها
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-8">
+                        <label>عنوان </label> <span class="spanStar"> * </span>
+                        <textarea id="titleKhoroje" type="text" class="form-control"></textarea>
+                        <span class="titKh"></span>
+                      </div>
+                      <div class="form-group col-md-4">
+                        <label>مقصد (به) </label> <span class="spanStar"> * </span>
+                        <textarea id="maghsadKhoroje" type="text" class="form-control"></textarea>
+                        <span class="maghKh"></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.روش انجام  -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    روش انجام
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label>نوع روش </label> <span class="spanStar"> * </span>
+                        <select id="noewRavesh" class="form-control select2" style="width: 100%;">
+                          <!--     <option>لطفا انتخاب نمائید ...</option> -->
+                          <option value="0">غیر سامانه ای </option>
+                          <option value="1">سامانه ای</option>
+                          <option value="2">ترکیبی</option>
+                        </select>
+                        <span class="noRavash"></span>
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label>نام سامانه </label> <span class="spanStar"> * </span>
+                        <input type="text" id="nameSamaneh" class="form-control">
+                        <span class="nameS"></span>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+          <!-- /.مستندات -->
+          <div class="row">
+            <div class="col-md-12">
+              <!-- general form elements -->
+              <div class="card card-secondary">
+                <div class="card-header">
+                  <h3 class="card-title">
+                    مستندات
+                  </h3>
+                  <div class="card-tools">
+                    <button type="button" class="btn btn-tool" data-widget="collapse"><i
+                        class="fa fa-minus"></i></button>
+                    <!--                 <button type="button" class="btn btn-tool" data-widget="remove"><i class="fa fa-remove"></i></button> -->
+                  </div>
+                </div>
+                <!-- /.card-header -->
+                <!-- form start -->
+                <div class="card-body">
+                  <form role="form">
+                    <div class="row">
+                      <div class="form-group col-md-6">
+                        <label>مستندات جاری</label>
+                        <input type="text" class="form-control" id="mostanadatJare"
+                          placeholder="فرم یا سند ثبت اطلاعات">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label> پشتیبان </label>
+                        <input type="text" class="form-control" id="poshtiban" placeholder="آئین نامه ،  دستور العمل">
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <!-- /.card-body -->
+
+              </div>
+              <!-- /.card -->
+            </div>
+          </div>
+
+          <!-- /.card-body -->
+          <div class="row">
+            <!--           <div class="col-md-12">
+              <button onclick="ActivityReg()" id="ActivityRegId" class="btn btn-primary float-left buttCus">
+                <a href="#heroFaaliat">
+                  ثبت فعالیت
+                </a>
+              </button>
+            </div>  -->
+            <div class="col-md-12">
+              <button type="button" onclick="SaveAndSend()" class="btn btn-success float-left buttCus">
+                <a id="SaveAndSendId" href="#heroFaaliat">
+                  ذخیره و ارسال
+                </a>
+              </button>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+              <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">success</h4>
+                  </div>
+                  <div class="modal-body">
+                    <p>فعالیت با موفقیت ثبت شد</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Ok</button>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <br> <br>
+            <br>
+            <br>
+          </div>
+      </section>
+      <!-- /.content -->
+    </div>
+    <!-- /.content-wrapper -->
+
+    <!--     <footer class="main-footer">
+      <strong>CopyLeft &copy; 2018 <a href="http://github.com/hesammousavi/">   </a>.</strong>
+    </footer> -->
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+      <!-- Control sidebar content goes here -->
+    </aside>
+    <!-- /.control-sidebar -->
+  </div>
+  <!-- ./wrapper -->
+  <!-- jQuery -->
+  <script src="plugins/jquery/jquery.min.js"></script>
+  <!-- jQuery UI 1.11.4 -->
+  <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="dist/js/adminlte.js"></script>
+  <script src="dist/js/demo.js"></script>
+  <script src="dist/js/sweet-alert.js"></script>
+  <script src="dist/js/custome.js"></script>
+  <script src="logIn/js/customeLogIn.js"></script>
+  <script src="logIn/js/jquery.cookie.js"></script>
+  
+<!--   <script>
+    $(document).ready(function () {
+     alert($.cookie('name'))
+    })
+  </script> -->
+</body>
+
+</html>

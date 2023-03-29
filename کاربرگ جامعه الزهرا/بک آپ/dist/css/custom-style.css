@@ -1,0 +1,422 @@
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir.eot");
+  src: url("../fonts/Vazir.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir.woff2") format("woff2"),
+    url("../fonts/Vazir.woff") format("woff"),
+    url("../fonts/Vazir.ttf") format("truetype");
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Bold.eot");
+  src: url("../fonts/Vazir-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Bold.woff2") format("woff2"),
+    url("../fonts/Vazir-Bold.woff") format("woff"),
+    url("../fonts/Vazir-Bold.ttf") format("truetype");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Light.eot");
+  src: url("../fonts/Vazir-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Light.woff2") format("woff2"),
+    url("../fonts/Vazir-Light.woff") format("woff"),
+    url("../fonts/Vazir-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Medium.eot");
+  src: url("../fonts/Vazir-Medium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Medium.woff2") format("woff2"),
+    url("../fonts/Vazir-Medium.woff") format("woff"),
+    url("../fonts/Vazir-Medium.ttf") format("truetype");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Thin.eot");
+  src: url("../fonts/Vazir-Thin.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Thin.woff2") format("woff2"),
+    url("../fonts/Vazir-Thin.woff") format("woff"),
+    url("../fonts/Vazir-Thin.ttf") format("truetype");
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: Vazir;
+  src: url("../fonts/Vazir-Black.eot");
+  src: url("../fonts/Vazir-Black.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Vazir-Black.woff2") format("woff2"),
+    url("../fonts/Vazir-Black.woff") format("woff"),
+    url("../fonts/Vazir-Black.ttf") format("truetype");
+  font-weight: 900;
+}
+
+/*---------------------------------- End of fonts ---------------------------------- */
+
+body {
+  font-family: "Vazir", sans-serif !important;
+}
+.header-parent{
+  padding-bottom: 5px;
+}
+
+.ltr {
+  direction: ltr;
+}
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.dropdown-item {
+  text-align: right;
+}
+.dropdown-footer,
+.dropdown-header {
+  text-align: center;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  padding-left: 0.5rem;
+}
+
+/*------------------------------------ contacts-list ------------------------------------*/
+
+.contacts-list-img {
+  float: right;
+}
+
+.contacts-list-info {
+  margin-right: 45px;
+  margin-left: 0;
+}
+
+/* sidebar */
+
+.sidebar {
+  direction: ltr;
+}
+
+.sidebar > div:first-child {
+  direction: rtl;
+}
+
+.control-sidebar,
+.control-sidebar:before {
+  left: -250px;
+  right: auto;
+  transition: left 0.3s ease-in-out;
+}
+
+.control-sidebar-slide-open .control-sidebar,
+.control-sidebar-slide-open .control-sidebar:before {
+  left: 0;
+  right: auto;
+}
+
+.small-box .icon {
+  right: auto;
+  left: 10px;
+}
+
+.nav-sidebar .nav-link > p > .right {
+  left: 1rem;
+  right: auto;
+}
+
+.nav-sidebar > .nav-item .nav-icon {
+  margin-right: 0;
+  margin-left: 0.2rem;
+}
+
+@media (min-width: 992px) {
+  .sidebar-mini.sidebar-collapse .content-wrapper,
+  .sidebar-mini.sidebar-collapse .main-footer,
+  .sidebar-mini.sidebar-collapse .main-header {
+    margin-right: 4.6rem;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 992px) {
+  .sidebar-mini.sidebar-collapse .content-wrapper,
+  .sidebar-mini.sidebar-collapse .main-footer,
+  .sidebar-mini.sidebar-collapse .main-header {
+    margin-left: 0rem !important;
+    margin-right: 4.6rem !important;
+    z-index: 100;
+  }
+
+  .sidebar-mini.sidebar-collapse .main-sidebar,
+  .sidebar-mini.sidebar-collapse .main-sidebar:before {
+    margin-right: 0;
+    width: 4.6rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content-wrapper,
+  .main-footer,
+  .main-header {
+    transition: margin-right 0.3s ease-in-out;
+    margin-right: 250px;
+    margin-left: 0;
+    z-index: 3000;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .main-sidebar,
+  .main-sidebar:before {
+    box-shadow: none !important;
+    margin-right: -250px;
+    margin-left: 0;
+  }
+
+  .content-wrapper,
+  .content-wrapper:before,
+  .main-footer,
+  .main-footer:before,
+  .main-header,
+  .main-header:before {
+    margin-right: 0;
+  }
+
+  .sidebar-open .main-sidebar,
+  .sidebar-open .main-sidebar:before {
+    margin-right: 0;
+    z-index: 4000;
+  }
+}
+
+.sidebar-collapse .main-sidebar,
+.sidebar-collapse .main-sidebar:before {
+  margin-right: -250px;
+}
+
+.main-sidebar {
+  left: auto;
+  right: 0;
+}
+
+/* Cards */
+
+.card-header > .card-tools {
+  right: auto;
+  left: 1rem;
+}
+
+.user-block img {
+  float: right;
+}
+
+.attachment-block .attachment-img {
+  float: right;
+}
+
+.attachment-block .attachment-pushed {
+  margin-left: 0px;
+  margin-right: 110px;
+}
+
+.card-comments .card-comment img,
+.img-lg,
+.img-md,
+.img-sm,
+.user-block.user-block-sm img {
+  float: right;
+}
+
+.card-comments .comment-text {
+  margin-right: 40px;
+  margin-left: 0;
+}
+
+.card-comments .card-comment img + .img-push,
+.img-sm + .img-push,
+.user-block.user-block-sm img + .img-push {
+  margin-left: 0px;
+  margin-right: 40px;
+}
+
+.user-block .comment,
+.user-block .description,
+.user-block .username {
+  margin-right: 50px;
+  margin-left: 0px;
+}
+
+.btn-group-vertical {
+  align-items: center;
+}
+
+/*------------------------- Form ----------------------------*/
+.select2-container .select2-search--inline {
+  float: right;
+}
+
+.select2-container--default .select2-search--inline .select2-search__field {
+  text-align: right;
+}
+
+/*----------------------- Extra Page ---------------------------*/
+.error-page > .headline {
+  float: right;
+}
+
+.error-page > .error-content {
+  margin-right: 190px;
+  margin-left: 0;
+}
+
+.lockscreen-image {
+  left: auto;
+  right: -10px;
+}
+
+.lockscreen-credentials {
+  margin-left: 0px;
+  margin-right: 70px;
+}
+
+.nav {
+  padding-inline-start: 0px !important;
+}
+
+/*---------------------------------- Persian Date Picker ---------------------------------- */
+
+.datepicker-plot-area {
+  font-family: "Vazir", sans-serif;
+}
+.card-title {
+  text-align: center;
+}
+.buttCus {
+  width: 10%;
+  margin-bottom: 1%;
+}
+html {
+  scroll-behavior: smooth;
+}
+.buttCus a {
+  display: block;
+  color: #fff;
+  outline: none;
+}
+.modal-dialog {
+  max-width: 500px;
+  margin: 10rem auto;
+}
+.imgJame {
+  width: 50px;
+  height: auto;
+}
+.wrapper {
+  position: unset;
+}
+.spanStar{
+  color: red;
+}
+.listView label{
+  color: #007bff;
+}
+.listView p{
+  color: red;
+  display: block;
+}
+.cateBox{
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+  box-shadow: 4px 4px 4px #ccc;
+  border: 1px solid #ccc;
+ background-color: blueviolet;
+}
+
+.listV b{
+  color: red;
+  display: block;
+  border-bottom: 1px solid rgb(192, 192, 192);
+}
+.cateBoxAct{
+  display: inline-block;
+  padding: 0.5rem;
+  width: 100%;
+  height: auto;
+  margin: 1rem;
+  box-shadow: 4px 4px 4px #ccc;
+  border: 1px solid #ccc;
+  background: yellow;
+}
+.cateBoxSub{
+  display: inline-block;
+  padding: 0.5rem;
+  width: 30%;
+  max-height: 400px;
+  margin: 1rem;
+  box-shadow: 4px 4px 4px #ccc;
+  border: 1px solid #ccc;
+  background: rgb(235, 235, 235);
+  overflow-y: scroll;
+}
+.cateBoxSub i{
+color: green;
+display: block;
+}
+.bpr-btn-parent{
+
+}
+.bpr-btn-edit{
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  align-items: center;
+}
+.bpr-btn-edit img{
+  width: 15px;
+  height: 15px;
+}
+.bpr-btn-delete{
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+.bpr-add-btn{
+  margin-top: 20px;
+  margin-right: 5px;
+}
+.bpr-add-btn:hover{
+  opacity: 0.7;
+}
+.list-col{
+  vertical-align: middle !important;
+}
+.list-col div{
+  padding: 0.5rem;
+  margin: 0;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center
+}
+.list-col div button:first-child{
+  margin-left: 15px;
+}
+
+.bpr-text-justify{
+  text-align: justify;
+}
+table{
+  white-space: nowrap;
+}
